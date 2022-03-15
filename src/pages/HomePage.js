@@ -14,11 +14,11 @@ export default function Homepage() {
             img={welcomeImage}
             />
             <section className="thumb--section">
-                {data.map((logement) => {
+                {data.map((logement, index) => {
                     return(
-                        <Link to={`/lodging/${logement.id}`}>
+                        <Link to={`/lodging/${logement.id}`} key={`${logement.id}-${index}`}>
                             <Thumb
-                            key={logement.id}
+                            
                             title={logement.title}
                             cover={logement.cover}
                             />

@@ -15,7 +15,7 @@ export default function LodgingPage() {
         <main>
             {data.filter(item => item.id === id).map(item => {
                 return (
-                    <main>
+                    <main key={item.id}>
                         <Carrousel pictures={item.pictures}/>
                         <section className="info--section red">
                             <Title

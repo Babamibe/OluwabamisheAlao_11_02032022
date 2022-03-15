@@ -12,17 +12,18 @@ export default function Carrousel(props) {
     
 
     return(
-        <section>
-            <div className="carrousel">
+        <section className="carrousel white">
+            <div className="carrousel--box">
                 <img className="carrousel--img" src={props.pictures[index]} alt=""/>
-            </div>
-            <article>
-                {props.pictures.length > 1 && <i className="fas fa-chevron-left" onClick={prev}></i>}
-                {props.pictures.length > 1 && <i className="fas fa-chevron-right" onClick={next}></i>}
-                <div className="carrousel--navigation ">                
-                    {index + 1}/{props.pictures.length}
+                <div className="carrousel--navigation">
+                    {props.pictures.length > 1 && <i className="fas fa-chevron-left" onClick={prev}></i>}
+                    {props.pictures.length > 1 && <i className="fas fa-chevron-right" onClick={next}></i>}
+                    <div className="carrousel--count">                
+                        {index + 1}/{props.pictures.length}
+                    </div>
                 </div>
-            </article>
+            </div>
+            
 
         </section>
     )

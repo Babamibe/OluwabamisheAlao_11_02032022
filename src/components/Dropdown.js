@@ -11,12 +11,12 @@ export default function Dropdown(props) {
     }
     
     return (
-        <article className="dropdown">
-            <div className="dropdown--header white" onClick={DisplayDropdown}>
-                <h3 className="dropdown--title">{props.title}</h3>
+        <article className={`dropdown ${props.about? "dropdown__long": "" }`}>
+            <div className={`dropdown--header white ${props.about? "dropdown--header__long": "" }`} onClick={DisplayDropdown}>
+                <h3 className={`dropdown--title ${props.about ? "dropdown--title__long" : ""}`}>{props.title}</h3>
                 <i className={`fas ${isIconValue? "fa-chevron-down": "fa-chevron-up"} dropdown--icon`}></i>
             </div>
-            <div className={`dropdown--content red ${isDisplayed ? "": "invisible"}`}  >
+            <div className={`dropdown--content red ${isDisplayed ? "": "invisible"} ${props.about? "dropdown--content__long": "" }`}  >
                 {props.content}
             </div>
         </article>

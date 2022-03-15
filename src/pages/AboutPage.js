@@ -20,6 +20,7 @@ export default function AboutPage() {
                             key={item.id}
                             title={item.title}
                             content={<p>{item.description}</p>}
+                            about={item.about}
                             />
                         )
                     })
